@@ -1,0 +1,240 @@
+<!--1、导航条-->
+<div ng-controller="headCtrl">
+    <nav id="nav" class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!--navbar-header-->
+            <div class="navbar-header">
+                <a href="#/start" class="navbar-brand">
+                    <img ng-src="img/logo.png" alt="THE MOUNTAIN"/>
+                </a>
+                <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#mycollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="mycollapse">
+                <ul class="list-inline list-unstyled nav-list">
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li class="list1">
+                        <a href="#">2017新设计</a>
+                        <div class="menu">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>2017 新设计</h4>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;大脸系列 - BIG FACE</a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;幻想系列 - FANTASY</a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;宠物系列 - PETS</a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;骷髅系列 - SKULLBONE</a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;涂鸦&艺术系列 - ART</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>2017 新款推荐T恤</h4>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img src="img/menu01.jpg" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <h4>波士顿梗 狗图案T恤 THE MOUNTAIN 3DT恤</h4>
+                                            </a>
+
+                                            <h4>
+                                                <s>￥158.00</s>￥129.00
+                                            </h4>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img src="img/menu02.jpg" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <h4>波士顿梗 狗图案T恤 THE MOUNTAIN 3DT恤</h4>
+                                            </a>
+
+                                            <h4>
+                                                <s>￥158.00</s>￥129.00
+                                            </h4>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list2">
+                        <a href="#">THE MOUNTAIN 图案系列</a>
+                        <div class="menu1">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>大脸T恤</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list1 in navlist1">
+                                    <a href="#">&gt;{{list1}}</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>幻想T恤</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list2 in navlist2">
+                                    <a href="#">&gt;{{list2}}</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>宠物T恤</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list3 in navlist3">
+                                    <a href="#">&gt;{{list3}}</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>骷髅T恤</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list4 in navlist4">
+                                    <a href="#">&gt;{{list4}}</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>涂鸦&艺术T恤</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list5 in navlist5">
+                                    <a href="#">&gt;{{list5}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list3">
+                        <a href="#">THE MOUNTAIN 身材</a>
+                        <div class="menu2">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>成人T恤（不区分男女）</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list6 in navlist6">
+                                    <a href="#">&gt;{{list6}}</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>少女和儿童T恤（小尺码）</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list6 in navlist6">
+                                    <a href="#">&gt;{{list6}}</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">
+                                        <h4>其他THE MOUNTAIN 风格</h4>
+                                    </a>
+                                </li>
+                                <li ng-repeat="list7 in navlist7">
+                                    <a href="#">&gt;{{list7}}</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">讨论区</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-box hidden-xs">
+                <input type="search" placeholder="搜索" class="nav-search" ng-model="kw"/>
+                <button class="glyphicon glyphicon-search"></button>
+            </div>
+            <div class="right-nav hidden-xs">
+                <ul class="list-unstyled list-inline">
+                    <li class="config">
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <ul class="list-unstyled list-inline" id="choosecolor">
+                            <li class="colors">
+                                Colors:
+                            </li>
+                            <li class="red">
+                            </li>
+                            <li class="green">
+                            </li>
+                            <li class="blue">
+                            </li>
+                            <li class="yellow">
+                            </li>
+                            <li class="royal">
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mycenter">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <ol class="list-unstyled center">
+                            <li>
+                                <a href="#">我的账户</a>
+                            </li>
+                            <li>
+                                <a href="#">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">我的购物车</a>
+                            </li>
+                            <li>
+                                <a href="#">下单</a>
+                            </li>
+                            <li>
+                                <a href="#">登录</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="cart">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

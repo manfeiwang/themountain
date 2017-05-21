@@ -1,0 +1,116 @@
+<!--页头-->
+<div ng-include="'include/header.html'"></div>
+<!--banner-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 hidden-xs">
+            <div id="banner" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#banner" data-slide-to="0" class="active"></li>
+                    <li data-target="#banner" data-slide-to="1"></li>
+                    <li data-target="#banner" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <a href="#">
+                            <img src="img/banner01.jpg" alt=".1.." class="img-responsive img-rounded">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="img/banner02.jpg" alt="..2." class="img-responsive img-rounded">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="img/banner03.jpg" alt="..3." class="img-responsive img-rounded">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 hidden-xs" id="banner-rt">
+            <div id="banner-rt1">
+                <a href="#">
+                    <img src="img/banner-r01.jpg" class="img-responsive img-rounded"/>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="img/banner-r02.jpg" class="img-responsive img-rounded"/>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="row" id="banner-bt">
+        <div class="col-sm-3">
+            <a href="#">
+                <img src="img/banner-b01.jpg" alt="" class="img-responsive img-rounded"/>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#">
+                <img src="img/banner-b02.jpg" alt="" class="img-responsive img-rounded"/>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#">
+                <img src="img/banner-b03.jpg" alt="" class="img-responsive img-rounded"/>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#">
+                <img src="img/banner-b04.jpg" alt="" class="img-responsive img-rounded"/>
+            </a>
+        </div>
+
+    </div>
+    <div class="row" id="main-list">
+        <div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="list in dishList">
+            <div>
+                <a href="#/detail/{{list.pid}}">
+                    <img ng-src="img/{{list.img}}" alt="" class="img-responsive img-rounded"/>
+                </a>
+                <div id="main-list-content">
+                    <a href="#/detail/{{list.pid}}">
+                        <h4>{{list.pname}}</h4>
+                    </a>
+                    <p>
+                        <s>{{list.pricebefore | currency:'￥'}}</s>
+                        {{list.pricenow | currency:'￥'}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-xs-12" ng-show="hasMore">
+            <button ng-click="loadMore()" class="btn btn-block btn-success load">加载更多</button>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3 col-xs-12" ng-hide="hasMore">
+            <p class="noMore">抱歉,没有更多数据可以加载了</p>
+        </div>
+    </div>
+    <div ng-hide="has">
+        抱歉，没有找到您要得东西。
+    </div>
+</div>
+<!--<div class="list-group">-->
+
+
+
+<!--<button-->
+        <!--ng-show="hasMore"-->
+        <!--ng-click="loadMore()"-->
+        <!--class="btn btn-block btn-success">加载更多</button>-->
+
+<!--<p ng-hide="hasMore">没有更多数据可以加载了</p>-->
+
+
+
+
+<!--页尾-->
+<div ng-include="'include/footer.html'"></div>

@@ -1,0 +1,99 @@
+<!--页头-->
+<div ng-include="'include/header.html'"></div>
+
+<div class="container">
+    <ul class="breadcrumb">
+        <li>
+            <a href="#/kflStart">主页</a>
+        </li>
+        <li>{{dish.detail}}</li>
+    </ul>
+        <div class="row" >
+            <div class="col-sm-6 col-xs-12">
+                <img ng-src="img/{{dish.img}}" alt="" class="img-responsive" width="80%"/>
+            </div>
+            <div class="col-sm-6 col-xs-12" id="detail-rt">
+                <h2>{{dish.detail}}</h2>
+                <h3>
+                    {{dish.pricenow | currency:'￥'}}
+                    <s>{{dish.pricebefore | currency:'￥'}}</s>
+                </h3>
+                <p>尺码：</p>
+                <select name="size">
+                    <option value="-1">选择尺码</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <p>数量：</p>
+                <input type="number" value="1"/>
+                <div>
+                    <button class="btn btn-danger">添加到购物车</button>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <h3>快速概览</h3>
+        <p>
+            在您仅仅一次清洗后，印花部分与T恤完全融为一体，看不出两者之间的界限。
+            实际上，我们独特的印花技术将T恤上的染剂析出，只将墨色留在T恤上，从本质上讲，这是用墨在染布。
+            <br/>
+            经典THE MOUNTAIN T恤的主要特点是宽松舒适以及加固双机针缝合。染色后经过清洗和晒干，您就可以收到舒适、防缩水以及立即可穿的T恤。 此款100%棉中厚型T恤舒适耐穿，可以穿着很多年。
+        </p>
+        <ul>
+            <li>
+                发货时间：现货发售，1-2个工作日出库。周末/节假日不发货。
+            </li>
+            <li>
+                预计到货时间: 在您付款后2 - 7天内，快递员会将产品送至您的手中。
+            </li>
+            <li>
+                退换货政策: 我们提供14天退换货服务，详情见 <a href="#">14天退换货政策</a> 。
+            </li>
+            <li>
+                配送范围: 中国大陆地区均可配送。
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <h3>详情</h3>
+        <h4>成人尺码表 | THE MOUNTAIN 3DT恤</h4>
+        <p>* “适合体重”和“适合身高”为参考值。T恤为宽松休闲款式，衣长偏长，请主要参考体重范围值来选码。</p>
+        <p>* 以下数据为T恤实物、手动测量，可能会有2-3cm误差。</p>
+        <p>* THE MOUNTAIN T恤为非标准尺寸生产，相同尺码也有尺寸不一致（尤其是衣长）的情况。</p>
+        <table id="size-tb" width="100%" border="1">
+            <thead>
+                <tr>
+                    <th>T恤尺码</th>
+                    <th>肩宽</th>
+                    <th>胸围</th>
+                    <th>衣长</th>
+                    <th>适合体重</th>
+                    <th>适合身高</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="size in Size">
+                    <td>{{size.s}}</td>
+                    <td>{{size.jk}}</td>
+                    <td>{{size.xw}}</td>
+                    <td>{{size.yc}}</td>
+                    <td>{{size.tz}}</td>
+                    <td>{{size.sg}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>THE MOUNTAIN T恤洗涤注意事项</h4>
+        <p>T恤前几次清洗时会有多余染料溶于水，这是正常现象，请勿过度漂洗。T恤本身不褪色，染料析出不影响图案效果。</p>
+        <p>* 请与其他衣物分开，使用冷水，单独洗涤。</p>
+        <p>* 请勿粗暴洗涤，机洗请尽量选择缓和模式、及使用洗衣袋。</p>
+        <p>* 请勿长时间浸泡，浸泡过久可能会使T恤褪色。</p>
+        <h4>如需退换货，请勿清洗T恤。</h4>
+    </div>
+
+
+</div>
+
+<!--页尾-->
+<div ng-include="'include/footer.html'"></div>
